@@ -1,14 +1,22 @@
-const Card = () => { 
+const Card = ({name, click}) => { 
   return (
   <div className="card">
-    <img src="https://source.unsplash.com/random/" alt="unsplash random image" />
-    <h2>Title</h2> 
-    <button>close</button>
-    <button>-</button>
-    <span className="material-symbols-outlined">mood</span>
-    <button>+</button>
+     <button className="close" onClick={click}>close</button>
+    <img src={`https://source.unsplash.com/400x400/?${name}`} alt={name} />
+
+  
+    <h2>{name}</h2> 
+    <div className="counts">
+    <button><span className="material-symbols-outlined thumb">thumb_up</span></button>
+    <span id="favorite" className="material-symbols-outlined">favorite</span>
+    <p id="amount">0</p>
+    <button><span className="material-symbols-outlined">thumb_down</span></button>
+    </div>
+    
   </div>
   );
 };
 
 export default Card;
+
+
