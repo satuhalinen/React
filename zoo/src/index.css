@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -31,8 +31,11 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 1rem;
 }
+
 .card {
   background-color: rgb(212, 119, 119);
 }
@@ -65,11 +68,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.cards {
-  display: flex;
-  gap: 1rem;
-}
-
 header,
 footer {
   background-color: rgb(199, 160, 87);
@@ -91,4 +89,23 @@ footer {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.close {
+  margin-bottom: 0.5rem;
+}
+
+.counts {
+  display: flex;
+  justify-content: center;
+}
+
+#favorite {
+  align-self: center;
+  margin: 1rem;
+}
+
+#amount {
+  margin: 1rem;
+  font-size: 20px;
 }
