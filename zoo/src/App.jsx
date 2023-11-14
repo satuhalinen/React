@@ -28,7 +28,7 @@ function App() {
         if (action === 'add'){
           return {...animal, likes: animal.likes + 1}
         }
-        else {
+        if (action === 'away') {
           return {...animal, likes: animal.likes - 1}
         }
       } else {
@@ -36,6 +36,11 @@ function App() {
       }
 
     })
+
+
+
+
+
 
 setOrganisms(updatedArray);
 
@@ -52,10 +57,10 @@ setOrganisms(updatedArray);
  <Card
  key={animal.name}
  {...animal}
- onRemove = {() => removeHandler(animal.name)}
+ onRemove = {() => removeHandler(animal.name, 'remove')}
 
  addLikes={() => likesHandler(animal.name, 'add')}
-  
+removeLikes={() => likesHandler(animal.name, 'away')}
        
        />
          ))}
