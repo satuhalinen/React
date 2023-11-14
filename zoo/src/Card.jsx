@@ -1,4 +1,5 @@
-const Card = ({name, click}) => { 
+const Card = ({name, click, likes, addLikes, removeLikes}) => { 
+  
   return (
   <div className="card">
      <button className="close" onClick={click}>close</button>
@@ -7,10 +8,14 @@ const Card = ({name, click}) => {
   
     <h2>{name}</h2> 
     <div className="counts">
-    <button><span className="material-symbols-outlined thumb">thumb_up</span></button>
-    <span id="favorite" className="material-symbols-outlined">favorite</span>
-    <p id="amount">0</p>
-    <button><span className="material-symbols-outlined">thumb_down</span></button>
+    <button onClick={addLikes}><span className="material-symbols-outlined thumb">thumb_up</span></button>
+   
+<div className="likes_container">
+<p id="amount">{likes}</p>
+<span id="favorite" className="material-symbols-outlined">{likes >= 0 ? 'favorite' : 'heart_broken'}</span>
+    </div>
+
+    <button onClick={removeLikes}><span className="material-symbols-outlined">thumb_down</span></button>
     </div>
     
   </div>
@@ -18,5 +23,8 @@ const Card = ({name, click}) => {
 };
 
 export default Card;
+
+
+
 
 
