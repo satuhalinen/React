@@ -11,30 +11,62 @@ function App() {
     
   );
 
+  const [search, setSearch] = useState('');
+
+
   const removeHandler = (name) => {
     const updatedArray = organisms.filter(animal => animal.name !== name)
     setOrganisms(updatedArray)
   }
   
+  const searchHandler = (e) =>{
+    setSearch(e.target.value);
+  }
+  const likesHandler = (name, action) => {
+    const updatedArray = organisms.map((animal) => {
+      if (animal.name === name){
+        if (action === 'add'){
+          return {...animal, likes: animal.likes + 1}
+        }
+        else {
+          return {...animal, likes: animal.likes - 1}
+        }
+      } else {
+        return animal;
+      }
+
+    })
+
+setOrganisms(updatedArray);
+
+  }
+
   return (
     <>
     <Header/>
     <main>
       <h1>Animals</h1>
+      <input type="text" onChange={searchHandler} />
       <div className="cards">
-        {organisms.map((animal) => (
+        {organisms.filter(organism => organism.name.toLowerCase().includes(search.toLowerCase())).map((animal) => (
  <Card
  key={animal.name}
  {...animal}
- click = {() => removeHandler(animal.name)}
+ onRemove = {() => removeHandler(animal.name)}
+
+ addLikes={() => likesHandler(animal.name, 'add')}
   
        
        />
          ))}
       </div>
+      
     </main>
     <Footer/>
     </>
   )
 }
 export default App
+
+
+
