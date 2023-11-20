@@ -1,10 +1,7 @@
 import { useState } from "react";
-import Card from "./components/Card";
 import Home from "./routes/Home";
 import Persons from "./routes/Persons";
 import ErrorPage from "./routes/ErrorPage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Root from "./routes/Root";
 import "./App.css";
 import image from "./assets/react.svg";
@@ -18,12 +15,6 @@ function App() {
   ]);
 
   const [search, setSearch] = useState("");
-
-  const [title, setTitle] = useState("Hello world");
-
-  const eventHandler = (name) => {
-    console.log(name);
-  };
 
   const removeHandler = (id) => {
     const updatedArray = persons.filter((person) => person.id !== id);

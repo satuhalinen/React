@@ -18,8 +18,6 @@ function Persons({ searchHandler, persons, search, removeHandler }) {
       </div>
     </>
   );
-
-  <h1>Persons will be here</h1>;
 }
 
 export default Persons;
