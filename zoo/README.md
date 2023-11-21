@@ -20,12 +20,12 @@ Instructions for your own project
 3. Make Header, Footer and Card components (separated files) XXXXX
 4. The card must have
    - 4.1. image, XXXXX
-   - 4.2 a title,
-   - 4.3 likes icon,
-   - 4.4 count of likes,
-   - 4.4 add and remove like buttons,
-   - 4.5 remove the card button.
+   - 4.2 a title, XXXXX
+   - 4.3 likes icon, XXXXX
+   - 4.4 count of likes, XXXXX
+   - 4.4 add and remove like buttons, XXXXX
+   - 4.5 remove the card button. XXXXX
 5. Import Header, Footer and Card to the App component XXXXX
 6. Style your app
-7. Connect animalsList.js with App state
-8. Display animals on the App (list and keys)
+7. Connect animalsList.js with App state XXXXX
+8. Display animals on the App (list and keys) XXXXX

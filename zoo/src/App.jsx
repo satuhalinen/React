@@ -1,9 +1,10 @@
-import Card from "./Card";
-import Header from "./Header";
-import Footer from "./Footer";
 import "./App.css";
 import { useState } from "react";
 import { animals, birds } from "./animalsList";
+import Home from "./routes/Home";
+import Root from "./routes/Root";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Animals from "./routes/Animals";
 
 function App() {
   const [organisms, setOrganisms] = useState(animals.concat(birds));
@@ -35,29 +36,31 @@ function App() {
     setOrganisms(updatedArray);
   };
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root />,
+      children: [
+        { path: "/home", element: <Home /> },
+        {
+          path: "/animals",
+          element: (
+            <Animals
+              searchHandler={searchHandler}
+              removeHandler={removeHandler}
+              likesHandler={likesHandler}
+              search={search}
+              organisms={organisms}
+            />
+          ),
+        },
+      ],
+    },
+  ]);
+
   return (
     <>
-      <Header />
-      <main>
-        <h1>Animals</h1>
-        <input type="text" onChange={searchHandler} />
-        <div className="cards">
-          {organisms
-            .filter((organism) =>
-              organism.name.toLowerCase().includes(search.toLowerCase())
-            )
-            .map((animal) => (
-              <Card
-                key={animal.name}
-                {...animal}
-                onRemove={() => removeHandler(animal.name)}
-                addLikes={() => likesHandler(animal.name, "add")}
-                removeLikes={() => likesHandler(animal.name, "away")}
-              />
-            ))}
-        </div>
-      </main>
-      <Footer />
+      <RouterProvider router={router} />
     </>
   );
 }
