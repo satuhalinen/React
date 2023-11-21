@@ -4,8 +4,10 @@ import { animals, birds } from "./animalsList";
 import Home from "./routes/Home";
 import Root from "./routes/Root";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Animals from "./routes/Animals";
+import AnimalsBirds from "./routes/AnimalsBirds";
 import Birds from "./routes/Birds";
+import Animals from "./routes/Animals";
+import About from "./routes/About";
 
 function App() {
   const [organisms, setOrganisms] = useState(animals.concat(birds));
@@ -42,16 +44,28 @@ function App() {
       path: "/",
       element: <Root />,
       children: [
-        { path: "/home", element: <Home /> },
+        { path: "/", element: <Home /> },
         {
           path: "/animalsbirds",
+          element: (
+            <AnimalsBirds
+              searchHandler={searchHandler}
+              removeHandler={removeHandler}
+              likesHandler={likesHandler}
+              search={search}
+              organisms={organisms}
+            />
+          ),
+        },
+        {
+          path: "/animals",
           element: (
             <Animals
               searchHandler={searchHandler}
               removeHandler={removeHandler}
               likesHandler={likesHandler}
               search={search}
-              organisms={organisms}
+              animals={animals}
             />
           ),
         },
@@ -66,6 +80,10 @@ function App() {
               birds={birds}
             />
           ),
+        },
+        {
+          path: "/about",
+          element: <About />,
         },
       ],
     },

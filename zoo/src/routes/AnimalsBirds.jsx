@@ -1,19 +1,19 @@
 import Card from "../components/Card";
-function Animals({
+function AnimalsBirds({
   searchHandler,
-  animals,
+  organisms,
   search,
   removeHandler,
   likesHandler,
 }) {
   return (
     <>
-      <h1>Animals</h1>
+      <h1>Animals and birds</h1>
       <input type="text" onChange={searchHandler} />
       <div className="cards">
-        {animals
-          .filter((animal) =>
-            animal.name.toLowerCase().includes(search.toLowerCase())
+        {organisms
+          .filter((organism) =>
+            organism.name.toLowerCase().includes(search.toLowerCase())
           )
           .map((animal) => (
             <Card
@@ -29,4 +29,4 @@ function Animals({
   );
 }
 
-export default Animals;
+export default AnimalsBirds;

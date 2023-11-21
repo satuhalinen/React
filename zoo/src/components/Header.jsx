@@ -16,6 +16,11 @@ const Header = () => {
         </ul>
         <ul>
           <li>
+            <NavLink to="/animals">Animals</NavLink>
+          </li>
+        </ul>
+        <ul>
+          <li>
             <NavLink to="/birds">Birds</NavLink>
           </li>
         </ul>
