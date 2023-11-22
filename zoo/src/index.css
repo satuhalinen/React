@@ -1,32 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
 :root {
-  font-family: Georgia, serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  color: white;
+  background-color: black;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
 
-body {
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+a:hover {
+  color: rgb(212, 119, 119);
 }
 
 .cards {
@@ -38,6 +29,7 @@ body {
 
 .card {
   background-color: rgb(212, 119, 119);
+  padding: 2rem;
 }
 
 .card img {
@@ -58,14 +50,6 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 header,
@@ -78,17 +62,8 @@ footer {
   padding: 0 2rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: white;
-    background-color: black;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button {
+  background-color: #f9f9f9;
 }
 
 .close {
@@ -108,4 +83,13 @@ footer {
 #amount {
   margin: 1rem;
   font-size: 20px;
+}
+
+.homePictures {
+  display: flex;
+}
+
+.animalPicture {
+  width: cover;
+  height: 200px;
 }
