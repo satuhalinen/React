@@ -1,31 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 # Zoo
 
-In this project, you practice creating components using state and props. Also, you learn how to work with lists and manipulate the state.
-
-This example is the MVP and you should improve it.
-
-Instructions for your own project
-
-1. Create a new React app XXXXX
-2. Clean App.js XXXXX
-3. Make Header, Footer and Card components (separated files) XXXXX
-4. The card must have
-   - 4.1. image, XXXXX
-   - 4.2 a title, XXXXX
-   - 4.3 likes icon, XXXXX
-   - 4.4 count of likes, XXXXX
-   - 4.4 add and remove like buttons, XXXXX
-   - 4.5 remove the card button. XXXXX
-5. Import Header, Footer and Card to the App component XXXXX
-6. Style your app
-7. Connect animalsList.js with App state XXXXX
-8. Display animals on the App (list and keys) XXXXX
+This is a project done on a course called React basics at Business College Helsinki. It shows you pictures of animals. You can search animals by name.
