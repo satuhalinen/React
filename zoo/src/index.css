@@ -1,8 +1,13 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+}
+
+body {
+  margin: 0;
 }
 
 :root {
@@ -30,10 +35,13 @@ a:hover {
 .card {
   background-color: rgb(212, 119, 119);
   padding: 2rem;
+  border-radius: 2%;
+  margin: 1rem;
 }
 
 .card img {
   width: 100%;
+  border-radius: 50%;
 }
 
 h1 {
@@ -59,7 +67,7 @@ footer {
   height: 55px;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  justify-content: flex-end;
 }
 
 button {
@@ -87,9 +95,42 @@ button {
 
 .homePictures {
   display: flex;
+  flex-grow: 1;
 }
 
 .animalPicture {
-  width: cover;
-  height: 200px;
+  background-image: url("./src/assets/raspopova-marina-yt39XjxwGUE-unsplash.jpg");
+  width: 50vw;
+  background-size: cover;
+  height: 100%;
+}
+
+.birdPicture {
+  background-image: url("./src/assets/joshua-j-cotten-r0eiuw481JM-unsplash.jpg");
+  background-size: cover;
+  width: 50vw;
+}
+nav ul {
+  list-style-type: none;
+  display: inline-block;
+  align-items: left;
+}
+
+input {
+  margin-bottom: 20px;
+  width: 200px;
+  display: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.leftside {
+  margin-right: auto;
+  margin-left: 30px;
+}
+
+.rightside {
+  margin-right: 30px;
 }

@@ -1,13 +1,13 @@
+import { NavLink } from "react-router-dom";
 function Home() {
   return (
     <>
-      <h1>This is the home page.</h1>
       <div className="homePictures">
         <div className="animalPicture">
-          <img src={`/src/assets/raspopova-marina-yt39XjxwGUE-unsplash.jpg`} />
+          <NavLink to="/animals">Animals</NavLink>
         </div>
         <div className="birdPicture">
-          <img src={`src/assets/joshua-j-cotten-r0eiuw481JM-unsplash.jpg`} />
+          <NavLink to="/birds">Birds</NavLink>
         </div>
       </div>
     </>

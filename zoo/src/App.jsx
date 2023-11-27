@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.css";
 import { useState } from "react";
 import { animals, birds } from "./animalsList";
 import Home from "./routes/Home";
