@@ -20,3 +20,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+.circle {
+  background-color: white;
+  border-radius: 2%;
+  color: black;
+  height: 100px;
+}
