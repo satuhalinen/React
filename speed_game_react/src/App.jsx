@@ -1,11 +1,14 @@
+import NewGame from "./components/NewGame";
 function App() {
-
+  const gameSetHandler = (level) => {
+    console.log(level);
+  };
   return (
     <>
-
-App will be here.
+      <h1>Freeze the berries!</h1>
+      <NewGame onclick={gameSetHandler} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
