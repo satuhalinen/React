@@ -1,14 +1,16 @@
 import Circle from "../UI_components/Circle";
 function Game({ score, circles, stopHandler }) {
   return (
-    <div>
+    <div className="startContent">
       <p>{score}</p>
-      <div>
+      <div className="circles">
         {circles.map((_, i) => (
-          <Circle key={i} />
+          <Circle key={i} id={i} />
         ))}
       </div>
-      <button onClick={stopHandler}>Stop game</button>
+      <button className="stopClass" onClick={stopHandler}>
+        Stop game
+      </button>
     </div>
   );
 }

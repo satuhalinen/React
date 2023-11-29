@@ -1,9 +1,9 @@
 import { useState } from "react";
 import NewGame from "./components/NewGame";
 import { levels } from "./levels";
-import Circle from "./UI_components/Circle";
 import Game from "./components/Game";
 import GameOver from "./components/GameOver";
+import Footer from "./components/Footer";
 
 function App() {
   const [player, setPlayer] = useState();
@@ -40,16 +40,28 @@ function App() {
     setGameOn(!gameOn);
     setGameOver(!gameOver);
   };
+
+  const closeHandler = () => {
+    setGameOver(!gameOver);
+    setGameLaunch(!gameLaunch);
+    setScore(0);
+  };
+
   console.log(player);
 
   return (
     <>
-      <h1>Freeze the berries!</h1>
-      {gameLaunch && <NewGame onclick={gameSetHandler} />}
-      {gameOn && (
-        <Game score={score} circles={circles} stopHandler={stopHandler} />
-      )}
-      {gameOver && <GameOver />}
+      <div className="startContent">
+        <h1>Freeze the berries!</h1>
+        {gameLaunch && <NewGame onclick={gameSetHandler} />}
+        {gameOn && (
+          <Game score={score} circles={circles} stopHandler={stopHandler} />
+        )}
+        {gameOver && (
+          <GameOver closeHandler={closeHandler} {...player} score={score} />
+        )}
+      </div>
+      <Footer />
     </>
   );
 }
