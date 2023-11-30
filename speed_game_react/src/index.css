@@ -1,5 +1,5 @@
 body {
-  background: url("pexels-julia-volk-7099647.jpg");
+  background: url("ice_background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ body {
 .circle {
   width: 100px;
   height: 100px;
-  background-color: rgba(173, 216, 230, 0.5);
+  background-color: #abb9c2;
   border-radius: 20%;
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ body {
 
 .startClass {
   border-radius: 20%;
-  background-color: #04aa6d;
+  background-color: rgb(36, 91, 112);
   border: none;
   color: white;
   padding: 0;
@@ -69,7 +69,7 @@ input:focus {
 
 .stopClass {
   border-radius: 20%;
-  background-color: red;
+  background-color: #e34959;
   border: none;
   color: white;
   padding: 0;
@@ -84,4 +84,46 @@ input:focus {
 footer {
   display: flex;
   justify-content: center;
+}
+
+#square0 {
+  background-image: url("bilberry.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#square1 {
+  background-image: url("strawberry.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#square2 {
+  background-image: url("cloudberry.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#square3 {
+  background-image: url("lingonberry.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#square4 {
+  background-image: url("raspberry.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#square5 {
+  background-image: url("buckthorn.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#square6 {
+  background-image: url("redcurrant.png");
+  background-position: center;
+  background-size: cover;
 }
