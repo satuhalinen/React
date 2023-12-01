@@ -8,7 +8,9 @@ function NewGame({ onclick }) {
   };
   return (
     <div>
-      <h2>Start a game by choosing difficulty and entering your name.</h2>
+      <h2>
+        Start a game by entering your name and choosing a difficulty level.
+      </h2>
       <input type="text" onChange={inputHandler}></input>
       <div className="circles">
         <button className="startClass" onClick={() => onclick("easy", name)}>

@@ -21,7 +21,6 @@ body {
   align-items: center;
   justify-content: center;
   margin: 1rem;
-  pointer-events: none;
   border: none;
 }
 

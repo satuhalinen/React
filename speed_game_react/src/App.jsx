@@ -47,6 +47,10 @@ function App() {
     setScore(0);
   };
 
+  const clickHandler = () => {
+    setScore(score + 100);
+  };
+
   console.log(player);
 
   return (
@@ -55,7 +59,12 @@ function App() {
         <h1>Freeze the berries!</h1>
         {gameLaunch && <NewGame onclick={gameSetHandler} />}
         {gameOn && (
-          <Game score={score} circles={circles} stopHandler={stopHandler} />
+          <Game
+            score={score}
+            circles={circles}
+            stopHandler={stopHandler}
+            clickHandler={clickHandler}
+          />
         )}
         {gameOver && (
           <GameOver closeHandler={closeHandler} {...player} score={score} />

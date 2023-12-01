@@ -1,4 +1,4 @@
-function Circle({ id }) {
+function Circle({ id, clickHandler }) {
   let squareName;
   if (id == 0) {
     squareName = "square0";
@@ -22,7 +22,7 @@ function Circle({ id }) {
     squareName = "square6";
   }
   return (
-    <div className="circle" id={squareName}>
+    <div className="circle" id={squareName} onClick={() => clickHandler()}>
       <p>{id}</p>
     </div>
   );
