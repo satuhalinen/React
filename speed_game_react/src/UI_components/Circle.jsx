@@ -1,5 +1,7 @@
 function Circle({ id, clickHandler }) {
   let squareName;
+  let current = 1;
+
   if (id == 0) {
     squareName = "square0";
   }
@@ -22,7 +24,11 @@ function Circle({ id, clickHandler }) {
     squareName = "square6";
   }
   return (
-    <div className="circle" id={squareName} onClick={() => clickHandler()}>
+    <div
+      className="circle"
+      id={id === current ? squareName : null}
+      onClick={() => clickHandler()}
+    >
       <p>{id}</p>
     </div>
   );
