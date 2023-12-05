@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import NewGame from "./components/NewGame";
 import { levels } from "./levels";
 import Game from "./components/Game";
@@ -20,6 +19,9 @@ function App() {
   const [current, setCurrent] = useState(0);
 
   const timeoutIdRef = useRef(null);
+  const rounds = useRef(0);
+  const currentInst = useRef(0);
+  console.log(rounds);
 
   let pace = 1000;
   let levelsAmount;
@@ -37,40 +39,55 @@ function App() {
     });
 
     setGameLaunch((prevLaunch) => !prevLaunch);
+    gameStart();
+  };
+
+  const randomNumber = () => {
+    if (rounds.current >= 3) {
+      stopHandler();
+      return;
+    }
+    let nextActive;
+
+    do {
+      nextActive = getRndInt(0, levelsAmount);
+    } while ((nextActive === currentInst, current));
+
+    setCurrent(nextActive);
+    currentInst.current = nextActive;
+    rounds.current++;
+    pace *= 0.95;
+    timeoutIdRef.current = setTimeout(randomNumber, pace);
+    console.log(nextActive);
+  };
+
+  function gameStart() {
     setGameOn(!gameOn);
     randomNumber();
-  };
-
-  const stopHandler = () => {
-    setGameOn(!gameOn);
-    setGameOver(!gameOver);
-    clearTimeout(timeoutIdRef.current);
-    timeoutIdRef.current = null;
-  };
-
-  const closeHandler = () => {
-    setGameOver(!gameOver);
-    setGameLaunch(!gameLaunch);
-    setScore(0);
-  };
+  }
 
   const clickHandler = (id) => {
     if (current !== id) {
       stopHandler();
       return;
     }
-    setScore(score + 100);
+    setScore((prevScore) => prevScore + 100);
+    rounds.current--;
   };
 
-  const randomNumber = () => {
-    let nextActive;
+  const stopHandler = () => {
+    clearTimeout(timeoutIdRef.current);
+    timeoutIdRef.current = null;
+    setGameOn(false);
+    setGameOver(!gameOver);
+    rounds.current = null;
+    pace = 1000;
+  };
 
-    do {
-      nextActive = getRndInt(0, levelsAmount);
-    } while (nextActive === current);
-    setCurrent(nextActive);
-    timeoutIdRef.current = setTimeout(randomNumber, pace);
-    console.log(nextActive);
+  const closeHandler = () => {
+    setGameOver(!gameOver);
+    setGameLaunch(!gameLaunch);
+    setScore(0);
   };
 
   console.log(player);
