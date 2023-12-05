@@ -26,7 +26,7 @@ function Circle({ id, clickHandler, current }) {
     <div
       className={`circle ${current ? "active" : ""}`}
       id={id === current ? squareName : null}
-      onClick={() => clickHandler()}
+      onClick={() => clickHandler(id)}
     >
       <p>{id}</p>
     </div>

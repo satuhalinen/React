@@ -54,7 +54,11 @@ function App() {
     setScore(0);
   };
 
-  const clickHandler = () => {
+  const clickHandler = (id) => {
+    if (current !== id) {
+      stopHandler();
+      return;
+    }
     setScore(score + 100);
   };
 
