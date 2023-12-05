@@ -159,3 +159,7 @@ footer {
   height: 70px;
   width: 70px;
 }
+
+.active {
+  background-image: url("strawberry.png");
+}
