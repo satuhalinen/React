@@ -51,7 +51,7 @@ function App() {
 
     do {
       nextActive = getRndInt(0, levelsAmount);
-    } while ((nextActive === currentInst, current));
+    } while (nextActive === currentInst.current);
 
     setCurrent(nextActive);
     currentInst.current = nextActive;
