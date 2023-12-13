@@ -4,8 +4,8 @@ import Persons from "./routes/Persons";
 import ErrorPage from "./routes/ErrorPage";
 import Root from "./routes/Root";
 import "./App.css";
-import image from "./assets/react.svg";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Posts from "./routes/Posts";
 
 function App() {
   const [persons, setPersons] = useState([
@@ -42,6 +42,10 @@ function App() {
               persons={persons}
             />
           ),
+        },
+        {
+          path: "/posts",
+          element: <Posts />,
         },
       ],
     },
