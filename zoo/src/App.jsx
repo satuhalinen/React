@@ -4,39 +4,41 @@ import { animals, birds } from "./animalsList";
 import Home from "./routes/Home";
 import Root from "./routes/Root";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AnimalsBirds from "./routes/AnimalsBirds";
-import Birds from "./routes/Birds";
-import Animals from "./routes/Animals";
 import About from "./routes/About";
+import CategoryPage from "./routes/CategoryPage";
 
 function App() {
-  const [organisms, setOrganisms] = useState(animals.concat(birds));
+  const [zoo, setZoo] = useState({
+    animals: animals,
+    birds: birds,
+  });
 
   const [search, setSearch] = useState("");
 
-  const removeHandler = (name) => {
-    const updatedArray = organisms.filter((animal) => animal.name !== name);
-    setOrganisms(updatedArray);
+  const removeHandler = (name, category) => {
+    const updatedArray = zoo[category].filter((el) => el.name !== name);
+    setZoo({ ...zoo, [category]: updatedArray });
   };
 
   const searchHandler = (e) => {
     setSearch(e.target.value);
   };
-  const likesHandler = (name, action) => {
-    const updatedArray = organisms.map((animal) => {
-      if (animal.name === name) {
+
+  const likesHandler = (name, action, category) => {
+    const updatedArray = zoo[category].map((el) => {
+      if (el.name === name) {
         if (action === "add") {
-          return { ...animal, likes: animal.likes + 1 };
+          return { ...el, likes: el.likes + 1 };
         }
         if (action === "away") {
-          return { ...animal, likes: animal.likes - 1 };
+          return { ...el, likes: el.likes - 1 };
         }
       } else {
-        return animal;
+        return el;
       }
     });
 
-    setOrganisms(updatedArray);
+    setZoo({ ...zoo, [category]: updatedArray });
   };
 
   const router = createBrowserRouter([
@@ -46,44 +48,21 @@ function App() {
       children: [
         { path: "/", element: <Home /> },
         {
-          path: "/animalsbirds",
-          element: (
-            <AnimalsBirds
-              searchHandler={searchHandler}
-              removeHandler={removeHandler}
-              likesHandler={likesHandler}
-              search={search}
-              organisms={organisms}
-            />
-          ),
-        },
-        {
-          path: "/animals",
-          element: (
-            <Animals
-              searchHandler={searchHandler}
-              removeHandler={removeHandler}
-              likesHandler={likesHandler}
-              search={search}
-              animals={animals}
-            />
-          ),
-        },
-        {
-          path: "/birds",
-          element: (
-            <Birds
-              searchHandler={searchHandler}
-              removeHandler={removeHandler}
-              likesHandler={likesHandler}
-              search={search}
-              birds={birds}
-            />
-          ),
-        },
-        {
           path: "/about",
           element: <About />,
+        },
+        {
+          path: "/:category",
+          element: (
+            <CategoryPage
+              {...zoo}
+              searchHandler={searchHandler}
+              removeHandler={removeHandler}
+              likesHandler={likesHandler}
+              search={search}
+              zoo={zoo}
+            />
+          ),
         },
       ],
     },
