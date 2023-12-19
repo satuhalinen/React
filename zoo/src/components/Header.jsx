@@ -26,7 +26,11 @@ const Header = (cleanHandler) => {
           </ul>
           <ul>
             <li>
-              <NavLink to="/birds" onClick={cleanHandler}>
+              <NavLink
+                to="/birds"
+                className="birdsHomeLink"
+                onClick={cleanHandler}
+              >
                 Birds
               </NavLink>
             </li>
