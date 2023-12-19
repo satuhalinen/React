@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 const Header = (cleanHandler) => {
+  const { pathname } = useLocation();
+  if (pathname == "/") {
+    return null;
+  }
   return (
     <header className="header">
       <div className="leftside">
