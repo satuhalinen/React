@@ -3,8 +3,8 @@ function About() {
     <>
       <h1>About</h1>
       <p className="aboutParagraph">
-        This is project called zoo done on course called React basics in
-        Business College Helsinki.
+        This project called zoo is done on course called React Basics in
+        Business College Helsinki during November-December 2023.
       </p>
     </>
   );

@@ -3,12 +3,12 @@ function Home() {
   return (
     <>
       <div className="homePictures">
-        <div className="animalPicture">
-          <NavLink to="/animals">Animals</NavLink>
-        </div>
-        <div className="birdPicture">
-          <NavLink to="/birds">Birds</NavLink>
-        </div>
+        <NavLink to="/animals" className=" animalPicture">
+          <div className="animalsHomeLink">ANIMALS</div>
+        </NavLink>
+        <NavLink to="/birds" className="birdPicture">
+          <div className="birdsHomeLink">BIRDS</div>
+        </NavLink>
       </div>
     </>
   );
