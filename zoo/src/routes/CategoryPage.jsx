@@ -17,9 +17,9 @@ function CategoryPage(props) {
             <Card
               key={el.name}
               {...el}
-              onRemove={() => props.removeHandler(el.name)}
-              addLikes={() => props.likesHandler(el.name, "add")}
-              removeLikes={() => props.likesHandler(el.name, "away")}
+              onRemove={() => props.removeHandler(el.name, category)}
+              addLikes={() => props.likesHandler(el.name, "add", category)}
+              removeLikes={() => props.likesHandler(el.name, "away", category)}
             />
           ))}
       </div>

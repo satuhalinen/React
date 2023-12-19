@@ -8,7 +8,7 @@ function SinglePage(props) {
   const data = array.find((el) => el.name == urlParams.name);
   return (
     <>
-      <img src="/?${data.name}" alt="x" />
+      <img src="/?${data.name}" alt="picture" />
       <h2>{data.name}</h2>
       <p>{data.likes}</p>
       <button onClick={() => navigate(-1)}>Go back</button>
