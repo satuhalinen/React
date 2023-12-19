@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-const Header = () => {
+const Header = (cleanHandler) => {
   return (
     <header className="header">
       <div className="leftside">
@@ -14,12 +14,16 @@ const Header = () => {
           </ul>
           <ul>
             <li>
-              <NavLink to="/animals">Animals</NavLink>
+              <NavLink to="/animals" onClick={cleanHandler}>
+                Animals
+              </NavLink>
             </li>
           </ul>
           <ul>
             <li>
-              <NavLink to="/birds">Birds</NavLink>
+              <NavLink to="/birds" onClick={cleanHandler}>
+                Birds
+              </NavLink>
             </li>
           </ul>
           <ul>

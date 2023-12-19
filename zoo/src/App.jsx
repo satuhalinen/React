@@ -41,6 +41,10 @@ function App() {
     setZoo({ ...zoo, [category]: updatedArray });
   };
 
+  const cleanHandler = () => {
+    setSearch("");
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -59,6 +63,7 @@ function App() {
               searchHandler={searchHandler}
               removeHandler={removeHandler}
               likesHandler={likesHandler}
+              cleanHandler={cleanHandler}
               search={search}
               zoo={zoo}
             />
