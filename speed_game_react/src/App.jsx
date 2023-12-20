@@ -23,6 +23,7 @@ function App() {
   const rounds = useRef(0);
   const currentInst = useRef(0);
   const [playSound] = useSound("iceClickPlay.mp3");
+  const [endSound] = useSound("iceClickEnd.mp3");
 
   let pace = 1000;
   let levelsAmount;
@@ -80,6 +81,7 @@ function App() {
     clearTimeout(timeoutIdRef.current);
     timeoutIdRef.current = null;
     setGameOn(false);
+    endSound();
     setGameOver(!gameOver);
     rounds.current = null;
     pace = 1000;
