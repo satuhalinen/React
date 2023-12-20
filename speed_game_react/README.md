@@ -12,6 +12,7 @@ Choosing the level:
 ![Chooseing the level](./public/startGame.png)
 
 Playing the game:
+
 ![Playing the game](./public/playingGame.png)
 
 End of the game:
