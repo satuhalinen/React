@@ -22,10 +22,11 @@ function Circle({ id, clickHandler, current }) {
   if (id == 6) {
     squareName = "square6";
   }
+
   return (
     <div
       className={`circle ${current ? "active" : ""}`}
-      id={id === current ? squareName : null}
+      id={current ? squareName : null}
       onClick={() => clickHandler(id)}
     >
       <p>{id}</p>

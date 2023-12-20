@@ -21,7 +21,6 @@ function App() {
   const timeoutIdRef = useRef(null);
   const rounds = useRef(0);
   const currentInst = useRef(0);
-  console.log(rounds);
 
   let pace = 1000;
   let levelsAmount;
@@ -58,7 +57,6 @@ function App() {
     rounds.current++;
     pace *= 0.95;
     timeoutIdRef.current = setTimeout(randomNumber, pace);
-    console.log(nextActive);
   };
 
   function gameStart() {
@@ -89,8 +87,6 @@ function App() {
     setGameLaunch(!gameLaunch);
     setScore(0);
   };
-
-  console.log(player);
 
   return (
     <>
