@@ -1,5 +1,5 @@
 body {
-  background: url("ice_background.jpg");
+  background: url("./public/assets/ice_background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@ body {
 }
 
 * {
-  cursor: url(flake.png), auto;
+  cursor: url(./public/assets/flake.png), auto;
   background-position: center;
 }
 
@@ -73,43 +73,43 @@ footer {
 }
 
 #square0 {
-  background-image: url("bilberry.png");
+  background-image: url("./public/assets/bilberry.png");
   background-position: center;
   background-size: cover;
 }
 
 #square1 {
-  background-image: url("strawberry.png");
+  background-image: url("./public/assets/strawberry.png");
   background-position: center;
   background-size: cover;
 }
 
 #square2 {
-  background-image: url("cloudberry.png");
+  background-image: url("./public/assets/cloudberry.png");
   background-position: center;
   background-size: cover;
 }
 
 #square3 {
-  background-image: url("lingonberry.png");
+  background-image: url("./public/assets/lingonberry.png");
   background-position: center;
   background-size: cover;
 }
 
 #square4 {
-  background-image: url("raspberry.png");
+  background-image: url("./public/assets/raspberry.png");
   background-position: center;
   background-size: cover;
 }
 
 #square5 {
-  background-image: url("buckthorn.png");
+  background-image: url("./public/assets/buckthorn.png");
   background-position: center;
   background-size: cover;
 }
 
 #square6 {
-  background-image: url("redcurrant.png");
+  background-image: url("./public/assets/redcurrant.png");
   background-position: center;
   background-size: cover;
 }
