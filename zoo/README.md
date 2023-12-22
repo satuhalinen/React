@@ -8,7 +8,7 @@ This is a project done on a course called React Basics at Business College Helsi
 
 ## Live page link
 
-https://main--inspiring-froyo-8d20dc.netlify.app/about
+https://main--inspiring-froyo-8d20dc.netlify.app/
 
 ## Visuals
 
