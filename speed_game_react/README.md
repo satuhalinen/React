@@ -6,14 +6,18 @@ This speed game is done on a course called React Basics. The game is a React ver
 
 - React
 
+# Live page link
+
+https://speedgamereact-c2vxoqpht-satuhalinens-projects.vercel.app/
+
 # Visuals
 
 Choosing the level:
-![Chooseing the level](./public/startGame.png)
+![Chooseing the level](./src/images/startGame.png)
 
 Playing the game:
 
-![Playing the game](./public/playingGame.png)
+![Playing the game](./src/images/playingGame.png)
 
 End of the game:
-![End of the game](./public/endGame.png)
+![End of the game](./src/images/endGame.png)
