@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import useSound from "use-sound";
 
 function getRndInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
   const gameSetHandler = (level, name) => {
     const { amount } = levels.find((el) => el.name === level);
     levelsAmount = amount;
-    const circlesArray = Array.from({ length: levelsAmount }, (x, i) => i);
+    const circlesArray = Array.from({ length: levelsAmount }, (_, i) => i);
 
     setCircles(circlesArray);
 
