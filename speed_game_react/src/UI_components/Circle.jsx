@@ -28,9 +28,7 @@ function Circle({ id, clickHandler, current }) {
       className={`circle ${current ? "active" : ""}`}
       id={current ? squareName : null}
       onClick={() => clickHandler(id)}
-    >
-      <p>{id}</p>
-    </div>
+    ></div>
   );
 }
 export default Circle;
