@@ -5,6 +5,8 @@ import Game from "./components/Game";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
 import useSound from "use-sound";
+import iceClickPlay from "./sounds/iceClickPlay.mp3";
+import iceClickEnd from "./sounds/iceClickEnd.mp3";
 
 function getRndInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -18,12 +20,11 @@ function App() {
   const [gameOn, setGameOn] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [current, setCurrent] = useState(0);
-
   const timeoutIdRef = useRef(null);
   const rounds = useRef(0);
   const currentInst = useRef(0);
-  const [playSound] = useSound("iceClickPlay.mp3");
-  const [endSound] = useSound("iceClickEnd.mp3");
+  const [playSound] = useSound(iceClickPlay);
+  const [endSound] = useSound(iceClickEnd);
 
   let pace = 1000;
   let levelsAmount;
