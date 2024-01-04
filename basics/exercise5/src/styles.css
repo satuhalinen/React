@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(2, 31, 31);
+  color: white;
+  margin: 2rem;
+}
+
+main {
+  background: linear-gradient(rgb(7, 79, 75) 0%, rgb(7, 48, 67) 100%);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.book {
+  background-color: white;
+  flex: 1;
+  color: #333;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+button {
+  display: block;
+  border: none;
+  background-color: rgb(231, 231, 231);
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 30px;
+  box-shadow: none;
+}
+
+button:hover {
+  background-color: rgb(20, 91, 107);
+  color: white;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input,
+select,
+option {
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  width: 200px;
+}
