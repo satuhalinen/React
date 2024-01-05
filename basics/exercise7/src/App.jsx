@@ -5,7 +5,9 @@ import "./styles.css";
 const App = () => {
   const [message, setMessage] = useState("");
 
-  const handleClick = () => {};
+  const handleClick = (userInput) => {
+    setMessage(userInput);
+  };
 
   return (
     <main>
