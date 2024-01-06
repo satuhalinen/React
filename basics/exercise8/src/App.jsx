@@ -1,16 +1,23 @@
 import { useState } from "react";
 import "./styles.css";
+import Form from "./Form";
+import View from "./View";
 
 const App = () => {
   const [details, setDetails] = useState();
 
-  // TODO: Write a function called handleChange that will store user input values in the 'details' variable as an object.
-
+  function handleChange(event) {
+    let name = event.target.name;
+    let input = event.target.value;
+    let newDetails = { ...details };
+    newDetails[name] = input;
+    setDetails(newDetails);
+  }
   return (
     <main>
       <h1>Forms and User Input</h1>
-      {/* TODO: import Form component and pass the handleChange function */}
-      {/* TODO: import View component and pass the details object */}
+      <Form handleChange={handleChange}></Form>
+      <View details={details}></View>
     </main>
   );
 };
