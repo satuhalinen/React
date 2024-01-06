@@ -5,7 +5,6 @@ import View from "./View";
 
 const App = () => {
   const [details, setDetails] = useState();
-
   function handleChange(event) {
     let name = event.target.name;
     let input = event.target.value;

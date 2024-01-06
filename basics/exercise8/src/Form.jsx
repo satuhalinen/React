@@ -2,28 +2,20 @@ const Form = ({ handleChange }) => {
   return (
     <>
       <form onChange={handleChange}>
-        <label>
-          First name
-          <input type="text" name="firstname"></input>
-        </label>
-        <label>
-          Last name
-          <input type="text" name="lastname"></input>
-        </label>
-        <label>
-          Phone
-          <input type="number" name="phone"></input>
-        </label>
-        <label>
-          Email
-          <input type="email" name="email"></input>
-        </label>
+        <label>First name</label>
+        <input type="text" name="firstname"></input>
+        <label>Last name</label>
+        <input type="text" name="lastname"></input>
+        <label>Phone</label>
+        <input type="number" name="phone"></input>
+        <label>Email</label>
+        <input type="email" name="email"></input>
         <label>Role</label>
         <select name="role">
           <option value="select your option" disabled>
             select your option
           </option>
-          <option value="student" selected>
+          <option value="student" defaultValue>
             student
           </option>
           <option value="teacher">teacher</option>
