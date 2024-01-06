@@ -1,8 +1,7 @@
-const UserProfile = ({ user }) => (
+const UserProfile = ({ user, handleLogOut }) => (
   <div>
     <h1>Welcome, {user}!</h1>
-    {/* TODO: Include handleLogOut function in the onClick event to log the user out */}
-    <button>Log out</button>
+    <button onClick={handleLogOut}>Log out</button>
   </div>
 );
 

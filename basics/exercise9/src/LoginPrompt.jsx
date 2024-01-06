@@ -1,6 +1,6 @@
+import { useRef } from "react";
 const LoginPrompt = ({ handleLogIn }) => {
-  // TODO: Use useRef hook to create a reference to the input element
-
+  const inputRef = useRef("");
   return (
     <div>
       <p>Please log in to see your profile.</p>
