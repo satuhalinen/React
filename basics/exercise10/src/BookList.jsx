@@ -20,7 +20,7 @@ const BookList = () => {
           <div>
             <Book
               visibilityHandler={() => visibilityHandler(data.id)}
-              showDescription={activeBookId === data.id ? false : true}
+              showDescription={activeBookId === data.id ? true : false}
               key={data.id}
               title={data.title}
               author={data.author}
@@ -29,9 +29,6 @@ const BookList = () => {
           </div>
         );
       })}
-      {/* TODO: Implement mapping of the books array from books.js to render each book using the Book component. 
-      Ensure each Book component receives the necessary props, including a showDescription prop to determine 
-      if the current book's description should be displayed based on its ID comparison with activeBookId. */}
     </div>
   );
 };

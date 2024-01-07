@@ -6,8 +6,6 @@ const App = () => {
     <main>
       <h1>List and keys</h1>
       <BookList></BookList>
-      {/* TODO: import BookList component to display the list of the books
-       */}
     </main>
   );
 };
