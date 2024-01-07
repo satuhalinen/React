@@ -6,7 +6,11 @@ const BookList = () => {
   const [activeBookId, setActiveBookId] = useState(null);
 
   const visibilityHandler = (id) => {
-    setActiveBookId(activeBookId === id ? null : id);
+    if (activeBookId === id) {
+      setActiveBookId(null);
+    } else {
+      setActiveBookId(id);
+    }
   };
 
   return (
@@ -15,6 +19,9 @@ const BookList = () => {
         return (
           <div>
             <Book
+              visibilityHandler={() => visibilityHandler(data.id)}
+              showDescription={activeBookId === data.id ? false : true}
+              key={data.id}
               title={data.title}
               author={data.author}
               description={data.description}
